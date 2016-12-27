@@ -1,0 +1,9 @@
+/**
+ Export to JSON plugin for PHPMyAdmin
+ @version 0.1
+ */
+
+// Database 'tutorial'
+// tutorial.student
+
+[{"id":"1","firstname":"Tareq IJ","lastname":"Abufayad","age":"34"}, {"id":"2","firstname":"Mona Issa","lastname":"Ali","age":"24"}, {"id":"3","firstname":"Yousef Ahmed","lastname":"AL Jaber","age":"18"}, {"id":"4","firstname":"Yasmeen Majed","lastname":"Farah","age":"19"}, {"id":"5","firstname":"Qasem Ali","lastname":"Abu Jerad","age":"22"}, {"id":"6","firstname":"Issa Tareq","lastname":"Abufayad","age":"18"}, {"id":"7","firstname":"Shamia Waijed","lastname":"Abu Halal","age":"26"}, {"id":"8","firstname":"Mariam Issa","lastname":"Shurab","age":"29"}, {"id":"9","firstname":"Toga Mohamed","lastname":"Al Zanonon","age":"22"}, {"id":"10","firstname":"Farah Mohamed","lastname":"Al Saqah","age":"23"}]

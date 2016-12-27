@@ -1,0 +1,57 @@
+<App>
+  <DockPanel>
+    <JavaScript>
+    var Observable = require("FuseJS/Observable");
+    var fields = Observable();
+
+    fetch("http://localhost/tutorial/showStudent.php/showStudent")
+    .then(function(response) {
+      return response.json();
+
+    }).then(function(data) {
+      console.log(JSON.stringify(data));  
+      for (var i in data.data){
+        var item = data.data[i];
+        fields.add(item);
+      }
+    }).catch(function(error) {
+      console.log(JSON.stringify(error));
+    });
+
+    module.exports = {
+      fields : fields
+    };
+    </JavaScript>
+
+    <StatusBarBackground Dock="Top" />
+    <BottomFrameBackground Dock="Bottom" />
+
+    <StackPanel Dock="Top">
+      <Text FontSize="28" Alignment="VerticalCenter"
+        TextAlignment="Center" Padding="2"
+        Value="Fetching MySQL Data" />
+        <Rectangle Height="1" Margin="0,2,0,0" Fill="#333c48" />
+      </StackPanel>
+
+      <Text ux:Class="Fname" Margin="10,10,10,5" TextWrapping="Wrap" FontSize="22" />
+      <Text ux:Class="Lname" Margin="10,0,10,0" TextWrapping="Wrap" FontSize="13"/>
+      <Text ux:Class="Age" Margin="10,0,10,0" FontSize="13" Color="#999" />
+
+      <ScrollView >
+        <StackPanel Alignment="Top">
+          <Panel Height="10" />
+          <Each Items="{fields}">
+            <Panel ux:Class="HorizontalBar" Margin="0,10,0,10"
+              Alignment="VerticalCenter">
+              <Rectangle Height="1" Fill="#dcdee3" />
+            </Panel>
+
+            <Fname Value="{firstname}" />
+            <Lname Value="{lastname}" />
+            <Age Value="{age}" />
+            <HorizontalBar />
+          </Each>
+        </StackPanel>
+      </ScrollView>
+    </DockPanel>
+  </App>
