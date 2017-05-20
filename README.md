@@ -5,5 +5,5 @@ The code structures as fellows:-
 -“PHP Files” folder contains the Server script that I uses.
 -“SQL Files” folder the database that uses in this app
 
-I will be happy to receive any inquires via : tareqfiad@gmail.com
+I will be happy to receive any inquires via : tariq.abufayad@gmail.com
 
